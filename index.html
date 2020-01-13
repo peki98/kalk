@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        function kalk(){
+            var n1=parseFloat(document.getElementById('n1').value);
+            var n2=parseFloat(document.getElementById('n2').value);
+            var operator=document.getElementById('oper').value;
+            if(operator ==='sabiranje'){
+                document.getElementById('rez').value=n1+n2;
+            }
+            if(operator ==='oduzimanje'){
+                document.getElementById('rez').value=n1-n2;
+            }
+            if(operator==='mnozenje'){
+                 document.getElementById('rez').value=n1*n2;
+            }
+            if(operator==='deljenje'){
+                document.getElementById('rez').value=n1/n2;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h2>JavaScript kalkulator</h2>
+<input type="text" id="n1"/><br/><br/>
+<input type="text" id="n2"/><br/><br/>
+
+
+<select id="oper">
+<option value="sabiranje">Sabiranje</option>
+<option value="oduzimanje">Oduzimanje</option>
+<option value="mnozenje">Mnozenje</option>
+<option value="deljenje">Deljenje</option>
+</select>
+<button onclick="kalk();">=</button>
+<input type="text" id="rez"/>
+
+
+</body>
